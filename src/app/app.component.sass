@@ -1,0 +1,74 @@
+
+/*GLOBAL POSITIONING*/
+#grid-container
+    display: grid
+    position: relative
+    grid-row-gap: 10px
+    grid-column-gap: 10px
+    grid-template-areas:  ". hdr hdr hdr hdr hdr unv unv unv unv unv ." "nav nav nav nav nav nav nav nav nav nav nav nav" "login login login login login login login login login login login login" "recipes recipes recipes recipes recipes recipes shopping-list shopping-list shopping-list . . " ". . . . . . . . . . . ." ". . . . . . . body3 . . . ." "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr"
+    grid-template-rows:    12vh 6vh 20vh 40vh 20vh 20vh 5vh
+    grid-template-columns: repeat(12,1fr)
+
+#header
+    grid-area: hdr
+    position: relative
+    width: 100%
+    height: auto
+
+#nav
+    grid-area: nav
+    position: relative
+    width: 100%
+    height: auto
+
+// #search
+//     grid-area: search
+//     width: 100%
+//     height: auto
+
+#usr-nav
+    grid-area: unv
+    position: relative
+    width: 100%
+    height: auto
+
+#login
+    grid-area: login
+    position: relative
+    width: 100%
+    height: auto
+
+#shopping-list
+    grid-area: shopping-list
+    position: relative
+    background-color: gray
+    width: 100%
+    height: auto
+
+#recipes
+    grid-area: recipes
+    position: relative
+    background-color: green
+    width: 100%
+    height: auto
+
+#body3
+    grid-area: body3
+    position: relative
+    background-color: red
+    width: 100%
+    height: auto
+
+#footer
+    grid-area: ftr
+    position: relative
+    background-color: lightgray
+    width: 100%
+    height: auto
+
+// ____________________________________________________________
+// ____________________________________________________________
+
+
+
+

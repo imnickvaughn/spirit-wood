@@ -1,0 +1,74 @@
+<div id="accordion">
+  <div class="accordion-lvl1"><a href="#">Nicky's Folders<span class="small-reg">&reg;</span></a><hr style="width: 60%;" class="half-rule">
+      <div class="accordion-lvl2 accordion-toggle2 sidenav-accordion open">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      <a href="#">2-Pockets</a>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Version II<small>(NF VER II)</small></a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion accordionlv3-arrow-fix"><span class="glyphicon glyphicon-play" aria-hidden="true"></span><a href="#">Nicky's<span class="small-reg">&reg;</span>Communicator</a>
+              <div class="accordion-lvl4 accordion-toggle3 sidenav-accordion"><a href="#">English</a></div>
+              <div class="accordion-lvl4 accordion-toggle3 sidenav-accordion"><a href="#" style="overflow: wrap;">Spanish Multilanguage</a>
+           </div>
+          </div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Class Work</a></div>
+          <div class="accordion-lvl3  accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Homework</a></div>
+          <div class="accordion-lvl3  accordion-toggle3 sidenav-accordion accordionlv3-arrow-fix"><span class="glyphicon glyphicon-play" aria-hidden="true"></span><a  href="#">Nicky's<span class="small-reg">&reg;</span>CPA</a>
+              <div class="accordion-lvl4 accordion-toggle3 sidenav-accordion"><a href="#">Version 10</a></div>
+              <div class="accordion-lvl4 accordion-toggle3 sidenav-accordion"><a href="#" style="overflow: wrap;">Version 11</a></div>
+           </div>
+          </div>
+
+      <div class="accordion-lvl2 accordion-toggle2 sidenav-accordion open">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      <a href="#">Multiple Page/Pocket</a>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>10-in-1 folder</a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>4 pocket</a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>6 pocket</a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>8 pocket</a></div>
+      </div>
+      
+      <div class="accordion-lvl2 accordion-toggle2 sidenav-accordion open">
+      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+      <a href="#">Tabbed</a>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Tab File</a></div>
+      </div>
+      
+      <div class="accordion-lvl2 accordion-toggle2 sidenav-accordion open">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+          <a href="#">Other</a>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Auto Insurance Form Holder</a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>Mini Wallet</a></div>
+          <div class="accordion-lvl3 accordion-toggle3 sidenav-accordion"><a href="#">Nicky's<span class="small-reg">&reg;</span>FS-20 Insurance Form Holder</a></div>
+      </div>
+  </div>
+  <script>
+  //allows us to toggle all lower levels from the clicked level1
+  //  if you want it to just toggle next child level change $(this).find('.accordion-toggle1 .sidenav-accordion').toggleClass('open'); to 
+  // $(this).find('.accordion-toggle1 > .sidenav-accordion').toggleClass('open');
+  // if you want to target all level 1's replace       with $('.accordion-toggle1 .sidenav-accordion').toggleClass('open');
+  $(function() {
+  $('.accordion-toggle1').on('click', function(){
+      $(this).find('.sidenav-accordion').toggleClass('open');
+      $(this).find('.glyphicon').toggleClass('glyph-rotate90');
+  }); 
+  });
+  //allows us to toggle all lower levels from the clicked level2
+  $(function() {
+  $('.accordion-toggle2').on('click', function(e){
+      $(this).siblings().children('.sidenav-accordion').removeClass('open').siblings('.glyphicon').removeClass('glyph-rotate90').removeClass('red-focus-text').siblings('a').removeClass('red-focus-text');
+      $(this).children('.sidenav-accordion').toggleClass('open');
+      $(this).children('.glyphicon').toggleClass('glyph-rotate90').toggleClass('red-focus-text').siblings('a').toggleClass('red-focus-text');
+      e.stopPropagation();  //would have had to this code since we need to include toggle2
+                                      // since toggle3 is under it $('.accordion-toggle1 .sidenav-accordion').toggleClass('open');
+  }); 
+  });
+  //allows us to toggle all lower levels from the clicked level3  
+  $(function() {
+  $('.accordion-toggle3').on('click', function(e){
+      $(this).children('.sidenav-accordion').toggleClass('open');  // $(".sidenav-accordion", this) for short
+      $(this).children('.glyphicon').toggleClass('glyph-rotate90').toggleClass('red-focus-text').siblings('a').toggleClass('red-focus-text');
+      e.stopPropagation();  //would have had to this code since we need to include toggle2
+                                      // since toggle3 is under it $('.accordion-toggle2 .sidenav-accordion').toggleClass('open');  
+  }); 
+  });
+  </script>
+</div>
