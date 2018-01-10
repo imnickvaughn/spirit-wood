@@ -1,0 +1,81 @@
+#accordion .sidenav-accordion
+  padding: 0 20px
+  background: #fff
+  max-height: 0px
+  overflow: hidden
+  opacity: 0
+  transition: all 0.3s ease
+  &.open
+    opacity: 1
+    padding: 3px
+    max-height: 400px
+
+.glyph-rotate90
+  transform: rotate(90deg)
+  transition: transform 300ms ease
+
+.glyphicon
+  transition: transform 300ms ease
+
+/*SIDE NAV PARAGRAPH CSS
+
+#accordion
+  .accordion-lvl1
+    margin-right: 0px
+    text-align: left
+  .accordion-lvl2
+    margin-left: 5px
+    text-align: left
+
+.accordion-lvl3
+  margin-left: 20px
+  text-align: left
+
+#accordion
+  .accordionlv3-arrow-fix
+    margin-left: 10px
+    text-align: left
+  .accordion-lvl4
+    margin-left: 15px
+    text-align: left
+  a
+    text-decoration: none
+  .accordion-lvl1 a
+    font-family: 'AlternateGothic2'
+    font-size: 20px
+    color: #0971ce
+  .accordion-lvl2 a
+    font-family: 'Roboto'
+    font-size: 10px
+    font-weight: 700
+    color: #113a72
+  .accordion-lvl3 a
+    font-family: 'Roboto'
+    font-size: 10px
+    font-weight: 500
+    color: #113a72
+  .accordion-lvl4 a
+    font-family: 'Roboto'
+    font-size: 10px
+    font-weight: 400
+    color: #113a72
+
+/*SIDE NAV FONT CSS
+
+.red-focus-text
+  color: #ed1c24 !important
+  text-decoration: none
+
+#accordion
+  .accordion-lvl2
+    a:focus, span:focus
+      color: #ed1c24
+      text-decoration: none
+  .accordion-lvl3
+    a:focus, span:focus
+      color: #ed1c24
+      text-decoration: none
+  .accordion-lvl4
+    a:focus, span:focus, a:focus
+      color: #ed1c24
+      text-decoration: none
